@@ -31,3 +31,33 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+Answer:
+
+As the mystery function is run, it recursively calls itself 3 times. As it calls itself, it divides the n by 3. This is equivilent to $3 \cdot T(\frac {n} {3})$.
+
+In the mystery function, there is 3 nested for-loops. 
+
+The first for-loop runs from 0 to n*n. This is equal to $n^2$.
+
+The second for-loop runs from 0 to n. This is just equal to $n$.
+
+The third for-loop runs from 0 to n*n again. This is also equal to $n^2$.
+
+If we multiply, $n^2 \cdot n \cdot n^2 = n^5$.
+
+So, the recurrence relation is equal to $T(n) = 3 \cdot T(\frac {n} {3}) + n^5$.
+
+If we use the master theorem,
+
+a = 3, b = 3, and d = 5.
+
+Since $d > log_{3} 3$, T(n) = big-O $(n^5)$.
+
+The runtime is big-O $(n^5)$.
+
+
+
+
+
+
