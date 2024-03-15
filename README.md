@@ -56,6 +56,24 @@ Since $d > log_{3} 3$, T(n) = big-O $(n^5)$.
 
 The runtime is big-O $(n^5)$.
 
+The base case is when $n \leq 1$.
+
+To solve this without the master theorem, we go through the function step by step.
+
+First, we have $n^5$
+
+Then, we have $3 \cdot (\frac {n} {3}) ^ 5$
+
+Then, we have $3^2 \cdot (\frac {n} {3^2}) ^ 5$ 
+
+Finally, we have $3^x \cdot (\frac {n} {3^x}) ^ 5$ 
+
+So, $n^5 + 3 \cdot (\frac {n} {3}) ^ 5 + 3^2 \cdot (\frac {n} {3^2}) ^ 5 + ... + 3^x \cdot (\frac {n} {3^x}) ^ 5$
+
+The function will not grow faster than $n^5$.
+
+So, the runtime is big-O $(n^5)$.
+
 
 
 
