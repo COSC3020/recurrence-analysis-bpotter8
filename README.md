@@ -58,24 +58,22 @@ The runtime is big-O $(n^5)$.
 
 The base case is when $n \leq 1$.
 
-To solve this without the master theorem, we go through the function step by step.
+$T(n) = 3 \cdot T(\frac {n} {3}) + n^5$
 
-First, we have $n^5$
+$= 3 (3 T (\frac {\frac {n} {3}} {3}) + \frac {n^5} {3}) + n^5$
 
-Then, we have $3 \cdot (\frac {n} {3}) ^ 5$
+$= 9 T (\frac {n} {9}) + 2n^5$
 
-Then, we have $3^2 \cdot (\frac {n} {3^2}) ^ 5$ 
+$= 9 (3 T (\frac {\frac {n} {9}} {3}) + \frac {n^5} {9}) + 2n^5$
 
-Finally, we have $3^x \cdot (\frac {n} {3^x}) ^ 5$ 
+$= 27 T (\frac {n} {27}) + 3n^5$
 
-So, $n^5 + 3 \cdot (\frac {n} {3}) ^ 5 + 3^2 \cdot (\frac {n} {3^2}) ^ 5 + ... + 3^x \cdot (\frac {n} {3^x}) ^ 5$
+$= 3^i T (\frac {n} {3^i}) + in^5$
 
-The function will not grow faster than $n^5$.
+$i = log_3 n$
 
-So, the runtime is big-O $(n^5)$.
+= 3 ^ $log_{3} n$ $\cdot T (\frac {n} {3^log_3 n}) + log_{3} n \cdot n^5$
 
+$= n \cdot 1 + log_3 n \cdot n^5$
 
-
-
-
-
+Since $n^5$ is the most dominant, the runtime is big-O ($n^5$).
