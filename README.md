@@ -68,11 +68,11 @@ $= 9 (3 T (\frac {\frac {n} {9}} {3}) + (\frac {n} {9})^5) + 3 (\frac {n} {3})^5
 
 $= 27 T (\frac {n} {27}) + 9 (\frac {n} {9})^5) + 3 (\frac {n} {3})^5 + n^5$
 
-$= 3^i T (\frac {n} {3^i}) + \sum_{j=0}^i  3$ ^ (i-1) * (n/3^(i-1))^5 + $n^5$
+$= 3^i T (\frac {n} {3^i}) + \sum_{j=0}^i (3 ^ {(i-1)}) \cdot (\frac {n} {3^{(i-1)}})^5 + n^5$
 
 $i = log_3 n$
 
-= 3 ^ $log_{3} n$ $\cdot T (\frac {n} {3^log_3 n}) + \sum_{j=0}$ ^ $(log_3 n)$  3 ^ $(log_3 n - 1)$ * ($\frac n 3$ ^ $(log_3 n - 1)$ )^5 + $n^5$
+$= 3^{(log_{3} n)} \cdot T (\frac {n} {3^{(log_3 n)}}) + \sum_{j=0}^{(log_3 n)}  (3 ^ {(log_3 n - 1)}) \cdot (\frac {n} {3 ^ {(log_3 n - 1)}} )^5 + n^5$
 
 $= n \cdot 1 + n^5$
 
